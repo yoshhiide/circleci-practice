@@ -1,0 +1,32 @@
+version: 2.1
+
+# リファレンスパラメータ
+defaults: &defaults
+  parameters:
+    message:
+      type: string
+      default: hello!
+
+node: &node
+  working_directory: ~/repo
+  executor:
+    name: node/default
+    tag: '12.16.0'
+
+# オーブ
+orbs:
+  node: circleci/node@2.0.1
+
+# ジョブ
+jobs:
+  hello:
+    <<: *defaults
+    <<: *node
+    steps:
+      - run: echo "<< parameters.message >>"
+
+# ワークフロー
+workflows:
+  hello-workflow:
+    jobs:
+      - hello
