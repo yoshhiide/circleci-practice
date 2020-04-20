@@ -29,15 +29,14 @@ https://app.circleci.com/projects/project-dashboard/github/{user-name}/
 
 ### 1. jobの複数実行(並列)
 1. `.circleci/config.yml` を開く
-2. jobを複数実行するように修正する
+2. jobを複数実行するように修正する(goodbye-workflowを追加し、echo "goodbye!"を実行する)
 3. `circleci config validate` でフォーマットチェックする
 4. GitHubにpushする (ワークフローが自動的に実行されます)
 
-5. goodbye-workflowを追加し、echo "goodbye!"を実行する
-
 ### 2. echoの値を変更する
 
-echo "hi!"にしてみる。
+パラメータを与えるようにし、
+echo "Hi!"にしてみる。
 
 ### 3. jobの順次実行(直列)
 
