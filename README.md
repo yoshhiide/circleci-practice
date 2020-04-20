@@ -25,28 +25,29 @@ https://app.circleci.com/projects/project-dashboard/github/{user-name}/
 
 
 
-## 4. 設定ファイルを修正
+## 4. 設定ファイルを修正(練習)
 
-### jobの複数実行(並列)
+### 1. jobの複数実行(並列)
 1. `.circleci/config.yml` を開く
 2. jobを複数実行するように修正する
 3. `circleci config validate` でフォーマットチェックする
 4. GitHubにpushする (ワークフローが自動的に実行されます)
 
-### jobの順次実行(直列)
+5. goodbye-workflowを追加し、echo "goodbye!"を実行する
 
+### 2. echoの値を変更する
 
+echo "hi!"にしてみる。
 
+### 3. jobの順次実行(直列)
 
+goodbye-workflowをhello-workflowが実行された後に実行されるようにする
 
+### 4. ブランチを条件とする
 
-### ブランチを条件とする
+特定のブランチに合致する場合や、合致しない場合にのみワークフローが実行されるようにする
 
-
-
-
-
-### CircleCIダッシュボード上でApproveしないと次のジョブが実行されないようにする
+### 5. CircleCIダッシュボード上でApproveしないと次のジョブが実行されないようにする
 
 
 
