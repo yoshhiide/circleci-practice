@@ -37,4 +37,5 @@ workflows:
     jobs:
       - hello:
           message: Hi!
-      - goodbye
+      - goodbye:
+          requires: [hello]
