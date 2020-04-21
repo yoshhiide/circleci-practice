@@ -32,3 +32,6 @@ workflows:
     jobs:
       - hello:
           message: Hi!
+  goodbye-workflow:
+    jobs:
+      - hello
