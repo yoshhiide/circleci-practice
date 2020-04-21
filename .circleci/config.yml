@@ -35,6 +35,8 @@ jobs:
 workflows:
   hello-workflow:
     jobs:
+      - start_approve:
+          type: approval
       - hello:
           message: Hi!
       - goodbye:
