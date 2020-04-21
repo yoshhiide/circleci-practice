@@ -38,6 +38,7 @@ workflows:
       - start_approve:
           type: approval
       - hello:
+          requires: [start_approve]
           message: Hi!
       - goodbye:
           requires: [hello]
